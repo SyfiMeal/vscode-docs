@@ -53,9 +53,9 @@
     },
     {
       "type": "documentation",
-      "title": "Agent hooks",
-      "description": "Use hooks to automate workflows, enforce security policies, validate operations, and integrate with external tools.",
-      "link": "/docs/copilot/customization/hooks"
+      "title": "Agents App (Insiders)",
+      "description": "Work in an Agent-first mode with the new, standalone Agents App.",
+      "link": "/docs/copilot/agents-app"
     },
     {
       "type": "blog",
