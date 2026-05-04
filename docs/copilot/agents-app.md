@@ -15,7 +15,7 @@ In this article, you learn about the VS Code Agents application and how to start
 <video src="images/agents-app/2649_AgentsDemo_v4.5.mp4" title="Video showing the Agents app experience in VS Code Insiders." controls></video>
 
 > [!NOTE]
-> The Agents application is currently in preview and only available with [VS Code Insiders](/insiders).
+> The Agents application is currently in preview and only available with [VS Code Insiders](/insiders). We're actively shaping it based on your feedback and are excited to learn alongside developers. Please share your experience by [filing issues on GitHub](https://github.com/microsoft/vscode/issues), or feel free to browse [existing `agents-app` issues](https://github.com/microsoft/vscode/issues?q=state%3Aopen%20label%3A%22agents-app%22).
 
 ## Prerequisites
 
@@ -88,6 +88,8 @@ To start a new agent session in the Agents application:
 
     > [!TIP]
     > You can track and create sessions that run on a remote machine via SSH or a dev tunnel. See [Open a session on a remote machine](#open-a-session-on-a-remote-machine) for more information.
+
+1. If the folder or repository you select isn't trusted yet, you'll be [prompted to trust](#trust-a-folder) it before you can start a session.
 
 1. For Copilot CLI sessions, choose between folder and worktree [isolation](/docs/copilot/agents/copilot-cli.md#isolation-modes) for the session.
 
@@ -258,6 +260,16 @@ The Agent Customizations panel enables you to easily manage all your customizati
 Use the dropdown in the top left of the Agent Customizations panel to choose which agent the customizations should apply to.
 
 ![Screenshot showing the Agent Customizations panel in the Agents application, with the list of available customizations visible.](images/agents-app/agents-app-customizations.png)
+
+## Trust a folder
+
+When you first open a new folder or repository in the Agents application, you're prompted to trust the folder and its subfolders. Folder trust is a security measure that prevents agents from running in untrusted folders, which could result in malicious code being executed on your machine.
+
+If you choose not to trust the folder, you can't start or continue agent sessions for that folder in the Agents application.
+
+![Screenshot of the folder trust prompt in the Agents application, asking the user to trust the folder before starting an agent session.](images/agents-app/agents-app-folder-trust.png)
+
+The Agents application shares the same workspace trust state with VS Code. If you trust a folder in VS Code, it is also trusted in the Agents application, and vice versa. Learn more about workspace trust in the [Workspace Trust documentation](/docs/editing/workspaces/workspace-trust.md).
 
 ## Switch to another GitHub account
 
