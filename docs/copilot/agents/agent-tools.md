@@ -262,14 +262,29 @@ For an overview of how sandboxing works, what it protects against, and OS-level 
 
 Agent sandboxing restricts file system and network access for commands executed by the agent. When sandboxing is enabled, terminal commands are auto-approved without requiring user confirmation, because they run in a controlled environment.
 
-To enable agent sandboxing, set the `setting(chat.agent.sandbox.enabled)` setting to `true`.
+You can choose between full isolation, which restricts both file system and network access, or file-system-only isolation, which allows unrestricted outbound network traffic.
 
-When sandboxing is enabled:
+To configure agent sandboxing, set the `setting(chat.agent.sandbox.enabled)` setting:
+
+| Value | Description |
+|-------|-------------|
+| `off` | Sandboxing is disabled. |
+| `on` | Full sandboxing with file system and network isolation (default). All outbound network access is blocked unless domains are explicitly allowed. |
+| `allowNetwork` | Sandboxing with file system isolation only. Outbound network traffic is allowed without requiring domain configuration, while file system restrictions still apply. |
+
+When sandboxing is enabled (`on` or `allowNetwork`):
+
+When file system access is restricted, the following rules apply to agent commands:
 
 * Commands have read access to workspace folders, the sandbox runtime temp folder, and any per-command paths that VS Code adds automatically (for example, paths required by `git`, `node`, `npm`, `dotnet`). Reads from your home directory (`$HOME`) are denied by default.
 * Commands have write access only to the current working directory and its subdirectories
-* Network access is blocked for all domains
 * Commands run without the user confirmation prompt
+
+When network access is restricted, the following rules apply to agent commands:
+
+* All outbound network access is blocked unless domains are explicitly allowed.
+* You can configure domain-level exceptions with `setting(chat.agent.allowedNetworkDomains)` and `setting(chat.agent.deniedNetworkDomains)`. Denied domains take precedence over allowed domains.
+* When set to `allowNetwork`, all outbound network traffic is permitted and domain settings are ignored.
 
 > [!IMPORTANT]
 > If the required OS dependencies for sandboxing are not installed, VS Code offers to install the necessary components. If you choose not to install them, sandboxing is not enabled.

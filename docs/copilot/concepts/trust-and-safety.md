@@ -92,6 +92,8 @@ Without file system isolation, a compromised command could modify files anywhere
 
 Without network isolation, a compromised command could exfiltrate sensitive data or could perform unintended actions on external services. Network isolation prevents this by blocking all outbound connections by default.
 
+When `setting(chat.agent.sandbox.enabled)` is set to `on`, all outbound network access is blocked unless you explicitly allow specific domains. If you want file system isolation but need unrestricted network access, set `setting(chat.agent.sandbox.enabled)` to `allowNetwork`. In this mode, commands can reach external services freely while file system restrictions still apply.
+
 VS Code provides network domain filtering that applies to both agent tools (fetch tool, integrated browser) and sandboxed terminal commands. Enable `setting(chat.agent.networkFilter)` to activate network filtering. Use `setting(chat.agent.allowedNetworkDomains)` and `setting(chat.agent.deniedNetworkDomains)` to control which domains the agent can access. Learn how to [configure network access](/docs/copilot/agents/agent-tools.md#configure-network-access).
 
 * **Domain allowlist.** You can explicitly permit access to specific domains.
