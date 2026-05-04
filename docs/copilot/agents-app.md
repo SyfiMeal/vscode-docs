@@ -176,9 +176,9 @@ To start a session on a remote machine via SSH:
 
 1. Select **New** or press `kb(workbench.action.chat.newChat)` to start a new agent session.
 
-1. In the workspace dropdown, select **SSH**. If you've already set up SSH connections, they will appear as options in the dropdown.
+1. In the workspace dropdown, select the **Remote** tab, and then select **SSH**. If you've already set up SSH connections, they will appear as options in the dropdown.
 
-    ![Screenshot showing how to select SSH in the workspace dropdown when starting a new agent session in the Agents application.](images/agents-app/agents-app-ssh.png)
+    ![Screenshot showing how to select SSH in the workspace dropdown when starting a new agent session in the Agents application.](images/agents-app/agents-app-remote.png)
 
 1. Enter the SSH connection string for the remote machine (for example, `user@hostname`).
 
@@ -188,17 +188,15 @@ To start a session on a remote machine via SSH:
 
 ### Connect via dev tunnel
 
-**Prerequisites**:
-
-* A dev tunnel is already running on the remote machine. See [Developing with Remote Tunnels](/docs/remote/tunnels.md) for setup instructions.
+**Prerequisite**: a dev tunnel is already running on the remote machine. See [Developing with Remote Tunnels](/docs/remote/tunnels.md) for setup instructions.
 
 To start a session on a remote machine via dev tunnel:
 
 1. Select **New** or press `kb(workbench.action.chat.newChat)` to start a new agent session.
 
-1. In the workspace dropdown, select **Tunnels** and choose your account type.
+1. In the workspace dropdown, select the **Remote** tab, and then select **Tunnels** and choose your account type.
 
-    ![Screenshot showing how to select Tunnels in the workspace dropdown when starting a new agent session in the Agents application.](images/agents-app/agents-app-tunnels.png)
+    ![Screenshot showing how to select Tunnels in the workspace dropdown when starting a new agent session in the Agents application.](images/agents-app/agents-app-remote.png)
 
 1. Choose the active dev tunnel from the list.
 
