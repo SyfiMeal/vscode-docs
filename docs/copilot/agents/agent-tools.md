@@ -240,7 +240,7 @@ For advanced scenarios, use object syntax with the `matchCommandLine` property t
 Related settings:
 
 * `setting(chat.tools.terminal.enableAutoApprove)`: permanently disable auto-approve functionality
-* `setting(chat.tools.terminal.blockDetectedFileWrites)` (experimental): detection of file writes (experimental)
+* `setting(chat.tools.terminal.blockDetectedFileWrites)` (experimental): when set to `outsideWorkspace` (default), require approval for terminal commands that write files outside your workspace. Writes to the OS temporary folder (`/tmp` on macOS and Linux, `%TEMP%` on Windows) are exempt when session-level command approval is active.
 * `setting(chat.tools.terminal.ignoreDefaultAutoApproveRules)` (experimental): disable all default rules (both allow and block), giving full control over all rules.
 
 > [!CAUTION]
