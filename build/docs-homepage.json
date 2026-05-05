@@ -46,16 +46,16 @@
   "latest": [
     {
       "type": "release",
-      "title": "VS Code 1.118 release",
-      "description": "Remotey control your ongoing Copilot CLI sessions, semantic indexing in any workspace, and faster OpenAI responses.",
-      "link": "/updates/v1_118",
-      "image": "/assets/updates/1_118/release-highlights.webp"
+      "title": "VS Code 1.119 release",
+      "description": "Share browser tabs with agents, cut token costs with background task tracking, and work with fewer sandbox interruptions.",
+      "link": "/updates/v1_119",
+      "image": "/assets/updates/1_119/release-highlights.webp"
     },
     {
       "type": "documentation",
-      "title": "Agent hooks",
-      "description": "Use hooks to automate workflows, enforce security policies, validate operations, and integrate with external tools.",
-      "link": "/docs/copilot/customization/hooks"
+      "title": "Agents App (Insiders)",
+      "description": "Work in an Agent-first mode with the new, standalone Agents App.",
+      "link": "/docs/copilot/agents-app"
     },
     {
       "type": "blog",

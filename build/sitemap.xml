@@ -6,6 +6,11 @@
         <priority>1.00</priority>
     </url>
     <url>
+        <loc>https://code.visualstudio.com/features/agents</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1.00</priority>
+    </url>
+    <url>
         <loc>https://code.visualstudio.com/docs</loc>
         <changefreq>weekly</changefreq>
         <priority>1.00</priority>
@@ -2091,6 +2096,11 @@
     </url>
 
     <!-- /learn -->
+    <url>
+        <loc>https://code.visualstudio.com/learn</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
     <url>
         <loc>https://code.visualstudio.com/learn/foundations/introduction-to-agent-first-development</loc>
         <changefreq>weekly</changefreq>
