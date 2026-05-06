@@ -1,6 +1,6 @@
 ---
 ContentId: 7b232695-cbbe-4f3f-a625-abc7a5e6496c
-DateApproved: 4/29/2026
+DateApproved: 5/6/2026
 MetaDescription: Overview of the configuration settings for GitHub Copilot in Visual Studio Code.
 MetaSocialImage: ../images/shared/github-copilot-social.png
 ---
@@ -117,8 +117,8 @@ The team is continuously working on improving Copilot in VS Code and adding new 
 | `setting(chat.agent.thinkingStyle)` _(Experimental)_<br/>Configure how thinking tokens are presented in chat. | `fixedScrolling` |
 | `setting(chat.mcp.autoStart)` _(Experimental)_<br/>Automatically start MCP servers when MCP configuration changes are detected. | `newAndOutdated` |
 | `setting(chat.tools.eligibleForAutoApproval)` _(Experimental)_<br/>Configure which tools require manual approval before they can be used by agents. | `[]` |
-| `setting(chat.tools.terminal.blockDetectedFileWrites)` _(Experimental)_<br/>Require user approval for terminal commands that perform file writes. | `outsideWorkspace` |
-| `setting(chat.agent.sandbox.enabled)` _(Preview)_<br/>Enable [sandboxing for agent commands](/docs/copilot/agents/agent-tools.md#sandbox-agent-commands) executed by the agent (macOS and Linux only). When enabled, commands are auto-approved and have restricted file system and network access. | `false` |
+| `setting(chat.tools.terminal.blockDetectedFileWrites)` _(Experimental)_<br/>Require user approval for terminal commands that perform file writes outside the workspace. Writes to the OS temporary folder (`/tmp` on macOS and Linux, `%TEMP%` on Windows) are exempt when session-level command approval is active. | `outsideWorkspace` |
+| `setting(chat.agent.sandbox.enabled)` _(Preview)_<br/>Enable [sandboxing for agent commands](/docs/copilot/agents/agent-tools.md#sandbox-agent-commands) executed by the agent (macOS and Linux only). Possible values: `off` (disabled), `on` (full file system and network isolation), `allowNetwork` (file system isolation only, all outbound network traffic is allowed). When enabled, commands are auto-approved and have restricted access. | `on` |
 | `setting(chat.agent.sandbox.FileSystem.linux)` _(Preview)_<br/>Configure file system access rules for sandboxed agent commands on Linux. Supports `allowRead`, `allowWrite`, `denyRead`, and `denyWrite` properties. | `{}` |
 | `setting(chat.agent.sandbox.FileSystem.mac)` _(Preview)_<br/>Configure file system access rules for sandboxed agent commands on macOS. Supports `allowRead`, `allowWrite`, `denyRead`, and `denyWrite` properties. | `{}` |
 | `setting(chat.agent.networkFilter)`<br/>Enable network domain filtering for agent tools (fetch tool, integrated browser). When enabled, network access is restricted according to `setting(chat.agent.allowedNetworkDomains)` and `setting(chat.agent.deniedNetworkDomains)`. When disabled, no filtering is applied. | `false` |

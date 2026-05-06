@@ -1,17 +1,16 @@
 {
   "featured": {
-    "title": "Take your Copilot CLI sessions on the go",
-    "description": "Monitor and steer ongoing Copilot CLI sessions from GitHub.com or your phone, search any workspace by meaning with semantic indexing everywhere, and enjoy faster OpenAI responses over WebSockets.",
-    "link": "/updates/v1_118",
-    "image": "/assets/updates/1_118/release-highlights.webp"
+    "title": "Let agents see your browser",
+    "description": "Share browser tabs with agents so they can validate changes in real time, reduce token costs with a lightweight background agent for task tracking, and stay in flow with fewer sandbox approval prompts.",
+    "link": "/updates/v1_119",
+    "image": "/assets/updates/1_119/release-highlights.webp"
   },
   "highlights": [
     {
-      "type": "blog",
-      "title": "Agents for real-world development",
-      "description": "From enforcing policies with hooks to guiding agents mid-response, validating UI features with integrated browser tools, and bringing structured skills directly into the editor.",
-      "link": "/blogs/2026/03/05/making-agents-practical-for-real-world-development",
-      "image": "/assets/blogs/2026/03/05/context-compaction.png"
+      "type": "learn",
+      "title": "Learn VS Code",
+      "description": "Build your skills with structured training modules with hands-on exercises and real-world examples.",
+      "link": "/learn"
     },
     {
       "type": "documentation",
